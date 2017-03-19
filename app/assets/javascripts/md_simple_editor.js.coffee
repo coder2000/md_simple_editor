@@ -28,20 +28,20 @@ md_simple_editor = () ->
             else if option == 'md_bold'
                "__Your bold text here__"
             else if option == 'md_list-ul'
-               "\n\n* Item 1\n* Item 2\n* Item 3 \n\n<br>"
+               "\n\n* Item 1\n* Item 2\n* Item 3 \n\n"
             else if option == 'md_list-ol'
-               "\n\n1. Item 1\n2. Item 2\n3. Item 3 \n\n<br> "
+               "\n\n1. Item 1\n2. Item 2\n3. Item 3 \n\n"
             else if option == 'md_indent'
                ">Your indented text here"
             else if option == 'md_underline'
                "<u>Your undelined text here </u>"
             else if option == 'md_table'
-               "\n|Header|Header|Header|\n|:------|:-------:|------:|\n|Left alignment|Centered|Right alignment|\n\n<br>"
+               "\n|Header|Header|Header|\n|:------|:-------:|------:|\n|Left alignment|Centered|Right alignment|\n\n"
             else if option == 'md_minus'
                "\n<hr>\n"
             else if option == 'md_square'
                "\n\t Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ut aliquet velit. Nam fermentum, mi quis egestas ornare, massa velit pharetra ante, sed
-                      pellentesque tortor nisl non quam. Nunc eget egestas orci.\n\n<br> "
+                      pellentesque tortor nisl non quam. Nunc eget egestas orci.\n\n"
             else if option == 'md_link'
               "\n[This is a link](http://google.com)\n"
             else if option == 'md_camera-retro'

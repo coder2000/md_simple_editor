@@ -9,18 +9,17 @@ module MdSimpleEditor
           content_tag(:div, :class => 'btn-toolbar', role: 'toolbar') do
             header_tags + text_tools + link_and_image_tools +
                 content_tag(:div, class: 'btn-group pull-righ') do
-                  button_tag(:type => 'button', :class => "#{@md_builder.default_class} btn-primary preview_md") do
-                    'Preview'
+                  button_tag(:type => 'button', :class => "#{@md_builder.default_class} btn-info preview_md") do
+                    'Предпросмотр'
                   end
                 end
           end +
-              content_tag(:br) +
               content_tag(:div, :id => 'md-text') do
                 yield
               end +
               content_tag(:div, class: 'panel panel-success preview-panel', hidden: true) do
                 content_tag(:div, class: 'panel-heading') do
-                  'Preview'
+                  'Предпросмотр'
                 end +
                     content_tag(:div, :id => 'md-preview', class: 'panel-body') do
                     end
