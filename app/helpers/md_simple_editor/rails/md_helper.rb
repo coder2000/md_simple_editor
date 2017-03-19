@@ -10,7 +10,7 @@ module MdSimpleEditor
             header_tags + text_tools + link_and_image_tools +
               content_tag(:div, class: 'btn-group pull-righ') do
                 button_tag(:type => 'button', :class => "#{@md_builder.default_class} btn-info preview_md") do
-                  'Предпросмотр'
+                  'Preview'
                 end
               end
           end +
