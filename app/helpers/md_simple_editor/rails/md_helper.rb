@@ -25,22 +25,28 @@ module MdSimpleEditor
       end
 
       def header_tags
-        content_tag(:div, :class => 'btn-group') do
-          button_tag(type: 'button', class: "#{@md_builder.default_class} md_h1") do
-            content_tag(:strong, 'H1')
-          end +
-            button_tag(type: 'button', class: "#{@md_builder.default_class} md_h2") do
+        content_tag(:div, :class => 'btn-group', role: :group) do
+          button_tag(type:         'button', class: "#{@md_builder.default_class} dropdown-toggle",
+                     'data-toggle' => :dropdown, 'aria-haspopup' => 'true', 'aria-expanded' => 'false') do
+            :Headers
+          end
+          +content_tag(:div, :class => 'dropdown-menu') do
+            button_tag(type: 'button', class: "#{@md_builder.default_class} md_h1 dropdown-item") do
+              content_tag(:strong, 'H1')
+            end
+            +button_tag(type: 'button', class: "#{@md_builder.default_class} md_h2 dropdown-item") do
               content_tag(:strong, 'H2')
-            end +
-            button_tag(type: 'button', class: "#{@md_builder.default_class} md_h3") do
+            end
+            +button_tag(type: 'button', class: "#{@md_builder.default_class} md_h3 dropdown-item") do
               content_tag(:strong, 'H3')
-            end +
-            button_tag(type: 'button', class: "#{@md_builder.default_class} md_h4") do
+            end
+            +button_tag(type: 'button', class: "#{@md_builder.default_class} md_h4 dropdown-item") do
               content_tag(:strong, 'H4')
-            end +
-            button_tag(type: 'button', class: "#{@md_builder.default_class} md_h5") do
+            end
+            +button_tag(type: 'button', class: "#{@md_builder.default_class} md_h5 dropdown-item") do
               content_tag(:strong, 'H5')
             end
+          end
         end
       end
 
