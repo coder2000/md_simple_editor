@@ -28,7 +28,7 @@ module MdSimpleEditor
         content_tag(:div, :class => 'btn-group', role: :group) do
           button_tag(type:         'button', class: "#{@md_builder.default_class} dropdown-toggle",
                      'data-toggle' => :dropdown, 'aria-haspopup' => 'true', 'aria-expanded' => 'false') do
-            :Headers
+            'Headers'
           end +
             content_tag(:div, :class => 'dropdown-menu') do
               button_tag(type: 'button', class: "#{@md_builder.default_class} md_h1 dropdown-item") do
