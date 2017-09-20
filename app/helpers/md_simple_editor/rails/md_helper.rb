@@ -17,8 +17,8 @@ module MdSimpleEditor
             content_tag(:div, :id => 'md-text') do
               yield
             end +
-            content_tag(:div, class: 'panel panel-success preview-panel', hidden: true) do
-              content_tag(:div, :id => 'md-preview', class: 'panel-body') do
+            content_tag(:div, class: 'card card-outline-success preview-panel', hidden: true) do
+              content_tag(:div, :id => 'md-preview', class: 'card-body') do
               end
             end
         end
