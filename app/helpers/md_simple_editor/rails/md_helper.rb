@@ -6,18 +6,19 @@ module MdSimpleEditor
       def md_simple_editor(klass='')
         @md_builder = MdBuilder.new(klass)
         content_tag(:div, :id => 'md-editor') do
-          content_tag(:div, :class => 'btn-toolbar mb-2', role: 'toolbar') do
-            header_tags + text_tools + link_and_image_tools +
-              content_tag(:div, class: 'btn-group float-right') do
-                button_tag(:type => 'button', :class => "#{@md_builder.default_class} btn-info preview_md") do
-                  'Preview'
-                end
-              end
-          end +
+          #content_tag(:div, :class => 'btn-toolbar mb-2', role: 'toolbar') do
+          #  header_tags + text_tools + link_and_image_tools +
+          #    content_tag(:div, class: 'btn-group float-right') do
+          #      button_tag(:type => 'button', :class => "#{@md_builder.default_class} btn-info preview_md") do
+          #        'Preview'
+          #      end
+          #    end
+          #end +
+          render 'md_simple_editor/toolbar'
             content_tag(:div, :id => 'md-text') do
               yield
             end +
-            content_tag(:div, class: 'card card-outline-success preview-panel', hidden: true) do
+            content_tag(:div, class: 'card border-success preview-panel', hidden: true) do
               content_tag(:div, :id => 'md-preview', class: 'card-body') do
               end
             end
