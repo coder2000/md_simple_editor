@@ -15,13 +15,13 @@ module MdSimpleEditor
           #    end
           #end +
           render 'md_simple_editor/toolbar'
-            content_tag(:div, :id => 'md-text') do
-              yield
-            end +
-            content_tag(:div, class: 'card border-success preview-panel', hidden: true) do
-              content_tag(:div, :id => 'md-preview', class: 'card-body') do
-              end
+          content_tag(:div, :id => 'md-text') do
+            yield
+          end +
+          content_tag(:div, class: 'card border-success preview-panel', hidden: true) do
+            content_tag(:div, :id => 'md-preview', class: 'card-body') do
             end
+          end
         end
       end
 
