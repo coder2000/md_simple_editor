@@ -25,7 +25,7 @@ module MdSimpleEditor
       end
 
       def header_tags
-        content_tag(:div, :class => 'btn-group', role: :group) do
+        content_tag(:div, :class => 'btn-group mr-2', role: :group) do
           button_tag(type:         'button', class: "#{@md_builder.default_class} dropdown-toggle",
                      'data-toggle' => :dropdown, 'aria-haspopup' => 'true', 'aria-expanded' => 'false') do
             'Headers'
@@ -51,7 +51,7 @@ module MdSimpleEditor
       end
 
       def link_and_image_tools
-        content_tag(:div, :class => 'btn-group') do
+        content_tag(:div, :class => 'btn-group mr-2') do
           button_tag(:type => 'button', :class => "#{@md_builder.default_class} md_link") do
             icon 'link'
           end +
@@ -62,7 +62,7 @@ module MdSimpleEditor
       end
 
       def text_tools
-        content_tag(:div, :class => 'btn-group') do
+        content_tag(:div, :class => 'btn-group mr-2') do
           button_tag(type: 'button', class: "#{@md_builder.default_class} md_italic") do
             icon 'italic'
           end +
