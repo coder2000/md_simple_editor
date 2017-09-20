@@ -1,7 +1,7 @@
 module MdSimpleEditor
   module Rails
     module MdHelper
-      FontAwesome::Rails::IconHelper
+      FontAwesome::Sass::Rails::ViewHelpers
 
       def md_simple_editor(klass='')
         @md_builder = MdBuilder.new(klass)
@@ -53,10 +53,10 @@ module MdSimpleEditor
       def link_and_image_tools
         content_tag(:div, :class => 'btn-group') do
           button_tag(:type => 'button', :class => "#{@md_builder.default_class} md_link") do
-            fa_icon 'link'
+            icon 'link'
           end +
             button_tag(:type => 'button', :class => "#{@md_builder.default_class} md_camera-retro") do
-              fa_icon 'camera-retro'
+              icon 'camera-retro'
             end
         end
       end
@@ -64,31 +64,31 @@ module MdSimpleEditor
       def text_tools
         content_tag(:div, :class => 'btn-group') do
           button_tag(type: 'button', class: "#{@md_builder.default_class} md_italic") do
-            fa_icon 'italic'
+            icon 'italic'
           end +
             button_tag(type: 'button', class: "#{@md_builder.default_class} md_bold") do
-              fa_icon 'bold'
+              icon 'bold'
             end +
             button_tag(:type => 'button', class: "#{@md_builder.default_class} md_list-ul") do
-              fa_icon 'list-ul'
+              icon 'list-ul'
             end +
             button_tag(:type => 'button', class: "#{@md_builder.default_class} md_list-ol") do
-              fa_icon 'list-ol'
+              icon 'list-ol'
             end +
             button_tag(:type => 'button', class: "#{@md_builder.default_class} md_indent") do
-              fa_icon 'indent'
+              icon 'indent'
             end +
             button_tag(:type => 'button', class: "#{@md_builder.default_class} md_underline") do
-              fa_icon 'underline'
+              icon 'underline'
             end +
             button_tag(:type => 'button', class: "#{@md_builder.default_class} md_table") do
-              fa_icon 'table'
+              icon 'table'
             end +
             button_tag(:type => 'button', class: "#{@md_builder.default_class} md_square") do
-              fa_icon 'square'
+              icon 'square'
             end +
             button_tag(:type => 'button', class: "#{@md_builder.default_class} md_minus") do
-              fa_icon 'minus'
+              icon 'minus'
             end
         end
       end
