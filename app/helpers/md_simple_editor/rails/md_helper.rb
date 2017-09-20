@@ -6,9 +6,9 @@ module MdSimpleEditor
       def md_simple_editor(klass='')
         @md_builder = MdBuilder.new(klass)
         content_tag(:div, :id => 'md-editor') do
-          content_tag(:div, :class => 'btn-toolbar', role: 'toolbar') do
+          content_tag(:div, :class => 'btn-toolbar mb-2', role: 'toolbar') do
             header_tags + text_tools + link_and_image_tools +
-              content_tag(:div, class: 'btn-group pull-righ') do
+              content_tag(:div, class: 'btn-group float-right') do
                 button_tag(:type => 'button', :class => "#{@md_builder.default_class} btn-info preview_md") do
                   'Preview'
                 end
